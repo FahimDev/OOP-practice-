@@ -9,5 +9,8 @@ public class Main {
         temp2.accountInfo();
         MyTemplate temp1 = new MyTemplate("Mr. Mike", 756486);
         temp1.accountInfo();
+
+       MyTemplate copyCons = new MyTemplate(temp1); //COPY Constructor
+       copyCons.accountInfo();//COPY Constructor
     }
 }
