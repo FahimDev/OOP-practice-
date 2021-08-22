@@ -10,5 +10,5 @@ public class Officer extends SeniorOfficer{
 
     private String pendingProject = so.pendingProject;
 
-    public double officerSal = (so.updatedFund*30)/100;
+    public double officerSal = (updatedFund*30)/100;
 }
