@@ -81,8 +81,23 @@ public class Main {
         //return BOOKs to LIBRARY
         //library.bookFineCounter(s2,30);
         System.out.println(s1.getName()+" has been charged "+library.bookFineCounter(book3,30)+"TK (BDT)");
+        System.out.println(s1.getName()+" has been charged "+library.bookFineCounter(book2,6)+"TK (BDT)");
         //library.bookFineCounter(s1,60,"I was COVID+",60);
-        System.out.println(s2.getName()+" has been charged "+library.bookFineCounter(book4,60,"I was COVID+",60)+"TK (BDT)");
+        System.out.println(s2.getName()+" has been charged "+library.bookFineCounter(book4,60,"I was COVID+"
+                ,60)+"TK (BDT)");
 
+        //PAY TO THE LIBRARY
+
+        accountStu1.addTransaction(accountStu1,accountLib,library.bookFineCounter(book3,30));
+
+        accountStu1.addTransaction(accountStu2,accountLib,library.bookFineCounter(book4,60,
+                "I was COVID+",60));
+        accountStu1.addTransaction(accountStu1,accountLib,library.bookFineCounter(book2,6));
+
+        System.out.println("Total Balance of library:" );
+        accountLib.showTotalBalance();
+
+        System.out.println("Transaction History:" );
+        accountStu1.showAllTranscation();
     }
 }
